@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+	background: url("images/natural_paper.png");
+}
+
+h1 {
+	color: white;
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	position: absolute;
+	z-index: 0;
+	top: 20%;
+	margin: 100px 0 100px 0;
+	text-align: center;
+	background-color: black;
+	padding: 10px;
+}
+
+h2 {
+	color: black;
+}
+
+header {
+	background: url("images/DinnerParty.jpg");
+	height: 400px;
+	text-align: center;
+}
+
+.social-icon img {
+	display: inline-block;
+	margin: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+#footer {
+	background-color: #FF8000;
+	position: relative;
+	bottom: 0;
+	text-align: center;
+}
+
+#tweet-button {	
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	text-align: center;
+	margin: auto;
+}

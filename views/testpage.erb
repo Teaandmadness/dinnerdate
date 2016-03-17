@@ -1,0 +1,48 @@
+<!doctype html>
+
+<head>
+
+
+<title>Plan Your Dinner Party</title>
+
+<link href='dist/css/bootstrap.css'rel='stylesheet'>
+<link rel="stylesheet"type="text/css"href="/dinnerdate.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+
+  <header>
+
+  <h1>HERE'S YOUR BOOKING DETAILS!</h1>
+
+  </header>
+<br/><br/>
+<img src = "images/logo.png" height="200" width="300"><br/><br/>
+<h2>Thanks very much for submitting your request <%= @name %>!<br/>Here are the details...</h2>
+<div class="form">
+
+<p>
+  <br/><strong>NAME:</strong> <%=@name %><br/><br/> 
+  <strong>DATE:</strong> <%= @date %><br/><br/>
+  <strong>VENUE COST PER HEAD: </strong>£<%= @inlineRadioOptions1 %><br/><br/>
+  <strong>CHEF COST PER HEAD:</strong> £<%= @inlineRadioOptions2 %><br/><br/>
+  <strong>TOTAL COST:</strong>  (venue cost + check cost)<br/><br/>
+</p>
+</div>
+<br/><br/><h2>Please check your emails for further confirmation and the next steps of your booking :)</h2><br/><br/><br/>
+
+<h2><a href="/twitter">Share the news with your friends!</a></h2>
+<br/><br/>
+
+<div id="footer">
+  <div class="social-icon">
+    <a target="_blank" href="https://www.facebook.com/freecakesuk/"><img src='images/facebook.png'></a>
+    <a target="_blank" href="https://www.instagram.com/cake/"><img src='images/instagram.png'></a>
+    <a target="_blank" href="https://twitter.com/freecakesuk"><img src='images/twitter.png'></a>
+  </div>
+</div>
+
+</body>

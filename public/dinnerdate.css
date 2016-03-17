@@ -1,0 +1,119 @@
+body {
+	text-align: center;
+	background: url("images/natural_paper.png");
+}
+
+h1 {
+	color: white;
+	font-size: 52px;
+	position: relative;
+	top: 40%;
+	font-family: 'Lobster', cursive;
+}
+
+h2 {
+	color: black;
+}
+
+header {
+	background: url("images/DinnerParty.jpg");
+	height: 400px;
+	text-align: center;
+}
+
+.comment {
+	background: #FF8000;
+	opacity: 0.8;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.social-icon img {
+	display: inline-block;
+	margin: 20px;
+}
+
+#footer {
+	background-color: #FF8000;
+	position: relative;
+	bottom: 0;
+	text-align: center;
+}
+
+/*Homepage*/
+
+.form {
+	display: inline-block;
+	background: white;
+	border-radius: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+#submit-button {
+	background-color: #FF8000;
+	font-size: 25px;
+	font-color: white;
+	border-radius: 5px;
+}
+
+/*Venue Page*/
+
+#venuelist {
+	padding-top: 5%
+}
+
+#navbar-brand
+			{
+
+	padding: 0;			
+}
+
+
+.venue1 {
+	background: url("images/pattern.jpg");
+	display: inline-block;
+	border-radius: 20px;
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+}
+
+
+.venue1 img {
+	width: 100%;
+	margin-top: 5%;
+	border-radius: 20px;
+}
+
+
+#venuepgs {
+	padding-top: 5%
+}
+
+#venuetext {
+	border-radius: 20px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#choices {
+
+	padding-bottom: 60px;
+	margin-bottom: 50px;
+
+
+.form-group1 {
+	display: inline;
+}
+
+.venue1 col-md-5 {
+	display: inline-block;
+
+}
+
+
+
+
+

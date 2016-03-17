@@ -1,0 +1,520 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <title>Plan Your Dinner Party</title>
+
+  <script src="jquery.js"></script>
+  <link href='dist/css/bootstrap.css'rel='stylesheet'>
+  <link rel="stylesheet"type="text/css"href="/dinnerdate.css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+
+</head>
+
+<body>
+<!--Navigation bar-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="navbar-brand" class="navbar-brand" href="/hello.rb">
+        <img alt="Dinner Date" src="images/dinner-date-small.gif">
+      </a>
+    </div>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Plan <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Review</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--End of navigation bar-->
+
+
+  <header>
+
+    <% if @name %>
+      <h1>Hello <%= @name %>! Welcome to Dinner Date </h1>
+    <% else %>
+      <h1>Hello! Welcome to Dinner Date</h1>
+    <% end %>
+
+  </header>
+
+<form>
+<div class="form">
+
+  <h2>Plan your party</h2><br/>
+  
+  <form method="post" action="/emailconfirm">
+
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" value="" placeholder="Sarah Smith" required="required" autofocus="autofocus"/><br/><br/>
+
+    <label for="email">Email address: </label>
+    <input type="email" id="email" name="email" value="" placeholder="sarah@example.com" required="required"/><br/><br/>
+
+    <label for="occasion">Occasion: </label>
+    <input type="text" id="occasion" name="occasion" value="" placeholder="Birthday party" required="required"/><br/><br/>
+
+    <label for="guests">Number of guests: </label>
+    <input type="number" id="guests" name="guests" value="" placeholder="8" required="required"/><br/><br/>
+
+    <label for="date">Date: </label>
+    <input type="text" id="date" name="date" value="" placeholder="29/06/16" required="required"/><br/><br/>
+</div>
+
+
+<!--VENUE PAGE-->
+
+
+<header>
+
+<div class="comment">
+    <h1>Hi <%= @name %>! Let's get planning your event.<br/><br>First, pick your venue...</h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id = "venuelist">
+
+<fieldset>
+
+
+<div class="container">
+  <div class="row">
+
+
+
+      
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="65">
+<img src = "images/forum.jpg">
+<h2>Forum Bar ~ East</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Forum Bar ~ East</h4>
+      </div>
+      <div class="modal-body">
+
+        Located just a stone's throw from Old Street, Forum Bar is housed in a 19th century coaching inn. Founded by directors Freddie Fleming, Ollie Pudney and Joe Swiers back in 2008, the pub has been run by a young and passionate team for over seven years now. Our aim is to provide outstanding seasonal food and great service while retaining a traditional pub atmosphere.
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+<div class = "col-md-2">
+</div>
+
+
+      
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="44">
+<img src = "images/drinkshopdo.jpg">
+<h2>Drink Shop Do ~ North</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel2">Drink Shop Do ~ North</h4>
+      </div>
+      <div class="modal-body">
+     From Drink Shop Do, Kentish Town is a stones throw away and is the perfect venue for pre-gig dinner and drink. A fine Victorian pub that combines old traditions with modern style; serving seasonal British food with a large selection of wines and real ales. The beautiful first floor function room is available for private hire on weekends and hosts events nightly throughout the week.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="105">
+<img src = "images/tikibar.jpg">
+<h2>Pacific Cove ~ West</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Pacific Cove ~ West</h4>
+      </div>
+      <div class="modal-body">
+     In two excellent locations in Kensington and Chelsea, Pacific Cove is a perfect venue for drinking and dining throughout the day, be it quick and tasty lunch or long, lingering dinner at which you can also take advantage of their extensive wine list and fabulous cocktails.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+<div class = "col-md-2">
+</div>
+
+
+
+
+<div class = "venue1 col-md-5">
+
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="98">
+<img src = "images/wishart.jpg">
+<h2>Wishart ~ South</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Wishart ~ South</h4>
+      </div>
+      <div class="modal-body">
+     With West Hampstead, Queens Park and Kensal Rise just a short stroll in either direction, the local catchment area is something that we are very fortunate to be able to embrace. Wishart offers a regularly changing menu which is bursting with traditional and exciting new options complimenting the new and improved building.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+  </div>
+</div>
+
+
+
+</fieldset>
+
+
+
+</div>
+
+
+
+
+<!-- CHEF SECTION-->
+
+
+<div id = "venuelist">
+
+
+<fieldset>
+
+
+
+<!--CHEF PAGE-->
+
+<div class="comment">
+
+<h1>Good choice <%= @name %>!<br/>Now, let's pick your chef for the evening</h1>
+</div><br/><br/><br/>
+
+
+<div class="container">
+  <div class="row">
+
+
+
+      
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="15">
+<img src = "images/thathungrychef.jpg">
+<h2>That Hungry Chef ~ Indian/Fusion</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">That Hungry Chef ~ Indian/Fusion</h4>
+      </div>
+      <div class="modal-body">
+     Made famous by his TV series in 2002, you can expect quirky, delicious food from a world famous chef. His Indian inspired menu, which is as seasonal and locally-sourced as possible, is complemented by the laid-back vibe. Money from your bill goes towards teaching his trainee chefs at his top London restaurant.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+<div class = "col-md-2">
+</div>
+
+
+
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions2" id="inlineRadio6" value="33">
+<img src = "images/alittlelusciousness.jpg">
+<h2>A Little Lusciousness ~ Traditional British</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">A Little Lusciousness ~ British</h4>
+      </div>
+      <div class="modal-body">
+     Now internationally renowned and holding a number of Michelin stars, this British chef has opened a string of successful restaurants across the globe, from Italy to the United States. These include two ventures in Doha, Qatar, which opened in 2012; a restaurant in Bordeaux; and three restaurants in Las Vegas. His dedication and natural talent has led him to train with some of the world’s leading chefs, including Albert Roux and Marco Pierre White in London, and Guy Savoy and Joël Robuchon in France.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions2" id="inlineRadio7" value="42">
+<img src = "images/nordish.jpg">
+<h2>M&M Riverside Cafe ~ Nordish</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal6">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">M&M Riverside Cafe ~ Nordish</h4>
+      </div>
+      <div class="modal-body">
+     M&M was began in 2008 with the opening of a restaurant at the Berkeley. They now have 3 unique restaurants with the same core values, each creating great dining experiences for their guests and an exciting and rewarding path for their teams.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+<div class = "col-md-2">
+</div>
+
+
+
+
+<div class = "venue1 col-md-5">
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions2" id="inlineRadio8" value="23">
+<img src = "images/gabriel.jpg">
+<h2>The Water House Project ~ Modern British</h2>
+</label>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal7">
+  Find out more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">The Water House Project ~ British</h4>
+      </div>
+      <div class="modal-body">
+   The Water House Project has won "Best British Restaurant" at the London Carlton Restaurant Awards for two consecutive years and gained its first Michelin star in 1999. Their cooking aims to highlight the natural flavours of quality produce, much of which is imported directly from Italy. A second restaurant, Spighetta, is located on Blandford Street.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF Modal -->
+
+</div>
+
+
+  </div>
+</div>
+
+
+</fieldset>
+<!-- </form>-->
+
+
+
+</div>
+
+
+
+
+
+<!--BILLING PAGE-->
+
+<div class="comment">
+  <h1>All Chosen?</h1>
+</div>
+    <br/><br/>
+<h2>Click below to submit your booking request...</h2>
+      <input type="submit" value="Confirm" id="submit-button">
+
+
+</form>
+   
+
+ 
+
+  <br/><br/>
+
+
+<div id="footer">
+  <div class="social-icon">
+    <a target="_blank" href="https://www.facebook.com/freecakesuk/"><img src='images/facebook.png'></a>
+    <a target="_blank" href="https://www.instagram.com/cake/"><img src='images/instagram.png'></a>
+    <a target="_blank" href="https://twitter.com/freecakesuk"><img src='images/twitter.png'></a>
+  </div>
+</div>
+
+
+</body>
+
+<script src="index.js"></script>
+
+
+<!--<script src="https://code.jquery.com/jquery-2.2.1.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
+</html>
